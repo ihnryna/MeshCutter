@@ -1,8 +1,7 @@
 //
 // Created by User on 13.11.2025.
 //
-#ifndef MESHCUTTER_CAMERAUTILITIES_H
-#define MESHCUTTER_CAMERAUTILITIES_H
+#pragma once
 #define MY_CAMERA_MOVE_SPEED 5.4f
 #include "rcamera.h"
 
@@ -20,5 +19,3 @@ inline void UpdateCameraPressAndDrag(Camera *camera, const int camera_mode) {
     if (IsKeyDown(KEY_SPACE)) CameraMoveUp(camera, cameraMoveSpeed);
     if (IsKeyDown(KEY_LEFT_CONTROL)) CameraMoveUp(camera, -cameraMoveSpeed);
 }
-
-#endif //MESHCUTTER_CAMERAUTILITIES_H

@@ -6,13 +6,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(libs/glm)
 add_subdirectory(libs/raylib)
-add_subdirectory(libs/assimp)
 
 add_executable(MeshCutter src/main.cpp
-        src/CameraUtilities.h)
+        src/DrawingUtils.cpp
+        src/CameraUtilities.h
+        src/Plane.cpp
+)
 
 target_link_libraries(MeshCutter
         PRIVATE glm
         PRIVATE raylib
-        PRIVATE assimp
 )
+
+file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR})
